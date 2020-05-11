@@ -1,0 +1,112 @@
+//font-styles and weights
+.font-mont { font-family: 'Montserrat', sans-serif; }
+.font-oswald { font-family: 'Oswald', sans-serif; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
+
+
+
+
+
+.logo {
+    img {
+        width: 35%;
+    }
+}
+
+/*initiate*/
+.initiate {
+    background-color: #1d9cdf;
+    h2, h3 {
+        color: white;
+    }
+    .inner-border {
+        background-color: #1891d8;
+        border-radius: 100%;
+        flex-direction: column;
+        cursor: pointer;
+        height: 180px;
+        width: 180px;
+        justify-content: center;
+        &:nth-child(1) {
+            img { height: 30%;}
+        }
+        img { height: 35%; }
+        h3 { color: white; margin-top: 10px; font-weight: 600;}
+    }
+}
+
+//What we do section
+.services {
+    margin-bottom: 30px;
+    padding: 0 10%;
+    .services-grid {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .grid-section{
+            width: 30%;
+            margin: 10px 10px;
+            &:nth-child(1) { .grid-inner {background-color: #46c8c8;}}
+            &:nth-child(2) { .grid-inner {background-color: #c4abd3;}}
+            &:nth-child(3) { .grid-inner {background-color: #f6b37c;}}
+            &:nth-child(4) { .grid-inner {background-color: #e3cbc7;}}
+            &:nth-child(5) { .grid-inner {background-color: #c3dbe7;}}
+            &:nth-child(6) { .grid-inner {background-color: #cac6c3;}}
+            &:nth-child(7) { .grid-inner {background-color: #d5d4a4;}}
+            &:nth-child(8) { .grid-inner {background-color: #e7abab;}}
+            &:nth-child(9) { .grid-inner {background-color: #e3dbb7;}}
+            .grid-inner { 
+                width: 100%;
+                margin: 10px 0px;        
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; }
+        }
+    }
+}
+
+//About section
+.about {
+    padding: 5% 10%;
+    background-color: #f6f6f6;
+    .about-content {
+        
+        p{ width: 30% }
+    }
+}
+
+//Team Section 
+.team {
+    padding: 5% 20%;
+    .team-people {
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 0;
+        .person {
+            width: 24%;
+            z-index: 0;            
+            &:hover {
+                .content { display: block; z-index: 2;}
+                img { filter: none;}
+            }
+            img { 
+                filter: grayscale(1);
+                transition: 300ms ease-in-out;
+                width: 100%;
+            }
+            .content {
+                position: absolute;
+                display: none;
+                z-index: 1000;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 85%;
+                margin: 0 auto;
+                background-color: white;
+                border: 1px solid rgb(141, 141, 141);
+            }
+        }
+    }
+}
