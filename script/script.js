@@ -28,4 +28,44 @@ $(document).ready(function (){
          }
          return false;
      });
+
+     //swiper slider initializing
+     var client_swiper = new Swiper('.client-swiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+
+            1020: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            768: {
+                slidesPerView: 2
+            },
+            600: {
+                spaceBetween: 10
+            },
+            480: {
+                slidesPerView: 1
+            },
+            320: {
+                slidesPerView: 1
+            }
+        }
+    });
+    var social_swiper = new Swiper('.social-swiper', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    })
 });

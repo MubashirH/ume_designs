@@ -78,8 +78,8 @@
 .about {
   padding: 5% 10%;
   background-color: #f6f6f6; }
-  .about .about-content p {
-    width: 30%; }
+  .about .about-content {
+    margin-top: 20px; }
 
 .team {
   padding: 5% 20%; }
@@ -89,7 +89,7 @@
     z-index: 0; }
     .team .team-people .person {
       width: 24%;
-      z-index: 0; }
+      margin-top: 20px; }
       .team .team-people .person:hover .content {
         display: block;
         z-index: 2; }
@@ -98,7 +98,10 @@
       .team .team-people .person img {
         filter: grayscale(1);
         transition: 300ms ease-in-out;
-        width: 100%; }
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); }
       .team .team-people .person .content {
         position: absolute;
         display: none;
@@ -109,5 +112,85 @@
         margin: 0 auto;
         background-color: white;
         border: 1px solid #8d8d8d; }
+
+.monkey-banner {
+  padding: 8% 0;
+  position: relative;
+  background-color: #46c8c8; }
+  .monkey-banner h2:nth-child(2) {
+    color: white; }
+
+.clients {
+  padding: 5% 10%;
+  background-color: #f6f6f6; }
+  .clients .views {
+    color: #5f5f5f;
+    border-top: 1px solid black;
+    padding-top: 40px; }
+  .clients .swiper-container {
+    width: 100%;
+    padding: 40px 0px;
+    margin-top: 20px; }
+    .clients .swiper-container .swiper-slide img {
+      position: relative;
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%); }
+  .clients h4 {
+    color: #5f5f5f; }
+    .clients h4 span {
+      color: #f41824; }
+
+.contact {
+  padding: 5% 10%; }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contact form div {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+      .contact form div input {
+        border: none;
+        border-bottom: 1px solid #1d9cdf;
+        width: 92%; }
+      .contact form div label {
+        margin: 0; }
+    .contact form button {
+      margin-top: 20px;
+      border: 1px solid #1d9cdf;
+      border-radius: 50px;
+      padding: 5px 30px;
+      color: #1d9cdf;
+      background-color: transparent; }
+
+.social {
+  padding: 5% 10%;
+  background-color: #f6f6f6; }
+
+footer {
+  background-color: #5c5c5c;
+  padding: 5% 10%; }
+  footer .blue {
+    color: #1d9cdf; }
+  footer span {
+    font-size: 13px; }
+  footer .address, footer .follow {
+    flex-direction: column;
+    justify-content: space-between; }
+    footer .address .blue, footer .follow .blue {
+      color: #1d9cdf; }
+    footer .address span, footer .follow span {
+      color: white; }
+  footer .follow input {
+    border-radius: 50px;
+    padding: 5px 0 5px 0;
+    border-color: transparent; }
+  footer .site-map ul {
+    list-style: none;
+    padding: 0px;
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
