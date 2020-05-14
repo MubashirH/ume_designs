@@ -53,12 +53,17 @@ $(document).ready(function () {
         }
     });
 
-    //swiper slider initializing
+    //Client Slider
     var client_swiper = new Swiper('.client-swiper', {
         slidesPerView: 3,
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
+        grabCursor: true,
+        autoPlay: {
+            delay: 1000,
+            disableOnInteraction: true
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -83,6 +88,21 @@ $(document).ready(function () {
             }
         }
     });
+
+    // Client Views Slider
+    var client_view_slider = new Swiper('.client-view-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides:true,
+        loop: true,
+        grabCursor: true,
+        autoPlay: {
+            delay: 1000,
+            disableOnInteraction: true
+        }
+    })
+
+    // Social CRS Activites slider
     var social_swiper = new Swiper('.social-swiper', {
         slidesPerView: 1,
         centeredSlides: true,
@@ -92,4 +112,5 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev'
         }
     })
+
 });

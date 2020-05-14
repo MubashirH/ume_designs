@@ -182,15 +182,34 @@ h1 {
     color: #5f5f5f;
     border-top: 1px solid black;
     padding-top: 40px; }
-  .clients .swiper-container {
+  .clients .client-swiper {
     width: 100%;
     padding: 40px 0px;
     margin-top: 20px; }
-    .clients .swiper-container .swiper-slide img {
+    .clients .client-swiper .swiper-slide img {
       position: relative;
       width: 60%;
       left: 50%;
       transform: translateX(-50%); }
+    .clients .client-swiper .swiper-button-next, .clients .client-swiper .swiper-button-prev {
+      height: 30px;
+      width: 30px;
+      background-color: white;
+      border-radius: 100%; }
+      .clients .client-swiper .swiper-button-next:after, .clients .client-swiper .swiper-button-prev:after {
+        font-size: 20px;
+        font-weight: bold; }
+  .clients .client-view-swiper {
+    width: 100%;
+    margin-top: 10px; }
+    .clients .client-view-swiper .client-slide {
+      justify-content: center; }
+      .clients .client-view-swiper .client-slide .profile {
+        margin-right: 15px;
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        background-color: grey; }
   .clients h4 {
     color: #636669; }
     .clients h4 span {

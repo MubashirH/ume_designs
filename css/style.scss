@@ -170,7 +170,7 @@ h1 { color: #636669;}
         border-top: 1px solid black;
         padding-top: 40px;
     }
-    .swiper-container {
+    .client-swiper {
         width: 100%;
         padding: 40px 0px;
         margin-top: 20px;
@@ -182,7 +182,31 @@ h1 { color: #636669;}
                 transform: translateX(-50%);
             }
         }
+        .swiper-button-next, .swiper-button-prev {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            border-radius: 100%;
+            &:after {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
     } 
+    .client-view-swiper {
+        width: 100%;
+        margin-top: 10px;
+        .client-slide {
+            justify-content: center;
+            .profile {
+                margin-right: 15px;
+                height: 80px;
+                width: 80px;
+                border-radius: 100%;
+                background-color: grey;
+            }
+        }
+    }
     h4 { 
         color: #636669;
         span { color: #f41824;}}
