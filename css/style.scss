@@ -7,7 +7,7 @@
 .bold { font-weight: 700; }
 
 * { letter-spacing: 1px; }
-
+h1 { color: #636669;}
 
 
 .logo {
@@ -41,7 +41,7 @@
 //What we do section
 .services {
     margin-bottom: 30px;
-    padding: 0 10%;
+    padding: 5% 10%;
     .services-grid {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -51,15 +51,15 @@
             display: none;
             cursor: pointer;
             margin: 10px 10px;
-            &:nth-child(1) { .grid-inner {background-color: #46c8c8;}}
-            &:nth-child(2) { .grid-inner {background-color: #c4abd3;}}
-            &:nth-child(3) { .grid-inner {background-color: #f6b37c;}}
-            &:nth-child(4) { .grid-inner {background-color: #e3cbc7;}}
-            &:nth-child(5) { .grid-inner {background-color: #c3dbe7;}}
-            &:nth-child(6) { .grid-inner {background-color: #cac6c3;}}
-            &:nth-child(7) { .grid-inner {background-color: #d5d4a4;}}
-            &:nth-child(8) { .grid-inner {background-color: #e7abab;}}
-            &:nth-child(9) { .grid-inner {background-color: #e3dbb7;}}
+            .color1 {background-color: #46c8c8;}
+            .color2 {background-color: #c4abd3;}
+            .color3 {background-color: #f6b37c;}
+            .color4 {background-color: #e3cbc7;}
+            .color5 {background-color: #c3dbe7;}
+            .color6 {background-color: #cac6c3;}
+            .color7 {background-color: #d5d4a4;}
+            .color8 {background-color: #e7abab;}
+            .color9 {background-color: #e3dbb7;}
             .grid-inner { 
                 position: relative;
                 display: table;
@@ -101,7 +101,8 @@
 .about {
     padding: 5% 10%;
     background-color: #f6f6f6;
-    h1, h4, p { opacity: 0.7; }
+    h4 {margin-top: 20px}
+    h4, h5 { opacity: 0.7; }
     .about-content {
         margin-top: 20px;
     }
@@ -116,30 +117,33 @@
         z-index: 0;
         .person {
             width: 24%;
-            margin-top: 20px;
+            margin-top: 40px;
             cursor: pointer;
             &:hover {
                 .content { display: block; z-index: 2;}
                 img { filter: none;}
+                .name { background-color: #1d9cdf; color: white; margin: 0; padding: 5px 15px;}
             }
             img { 
                 filter: grayscale(1);
                 transition: 300ms ease-in-out;
-                width: 70%;
+                width: 75%;
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
             }
             .content {
                 position: absolute;
+                padding: 5%;
                 display: none;
                 z-index: 1000;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 85%;
+                width: 100%;
                 margin: 0 auto;
                 background-color: white;
                 border: 1px solid rgb(141, 141, 141);
+                h4 { color:  #1d9cdf; margin-bottom: 20px;}
             }
         }
     }
@@ -180,7 +184,7 @@
         }
     } 
     h4 { 
-        color: #5f5f5f;
+        color: #636669;
         span { color: #f41824;}}
 }
 
