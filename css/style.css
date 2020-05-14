@@ -16,13 +16,16 @@
 .bold {
   font-weight: 700; }
 
+* {
+  letter-spacing: 1px; }
+
 .logo img {
   width: 35%; }
 
 /*initiate*/
 .initiate {
   background-color: #1d9cdf; }
-  .initiate h2, .initiate h3 {
+  .initiate h1, .initiate h3 {
     color: white; }
   .initiate .inner-border {
     background-color: #1891d8;
@@ -47,8 +50,12 @@
   .services .services-grid {
     flex-wrap: wrap;
     justify-content: space-evenly; }
+    .services .services-grid .grid-display {
+      display: flex !important; }
     .services .services-grid .grid-section {
       width: 30%;
+      display: none;
+      cursor: pointer;
       margin: 10px 10px; }
       .services .services-grid .grid-section:nth-child(1) .grid-inner {
         background-color: #46c8c8; }
@@ -69,27 +76,58 @@
       .services .services-grid .grid-section:nth-child(9) .grid-inner {
         background-color: #e3dbb7; }
       .services .services-grid .grid-section .grid-inner {
+        position: relative;
+        display: table;
         width: 100%;
-        margin: 10px 0px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; }
+        padding-bottom: 12px; }
+        .services .services-grid .grid-section .grid-inner img {
+          opacity: 0.5;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -60%); }
+        .services .services-grid .grid-section .grid-inner h1 {
+          display: none;
+          transition: 300ms ease-in-out;
+          position: absolute;
+          right: 10px;
+          bottom: 0px;
+          opacity: 0;
+          color: white; }
+        .services .services-grid .grid-section .grid-inner .text {
+          display: table-cell;
+          vertical-align: bottom; }
+        .services .services-grid .grid-section .grid-inner h2 {
+          color: white;
+          transition: 300ms ease-in-out; }
+      .services .services-grid .grid-section:hover img {
+        opacity: 1; }
+      .services .services-grid .grid-section:hover h2 {
+        color: black; }
+      .services .services-grid .grid-section:hover h1 {
+        display: block;
+        opacity: 0.7; }
+      .services .services-grid .grid-section:hover .grid-inner {
+        box-shadow: inset -4px 2px 20px 0px rgba(128, 128, 128, 0.705); }
 
 .about {
   padding: 5% 10%;
   background-color: #f6f6f6; }
+  .about h1, .about h4, .about p {
+    opacity: 0.7; }
   .about .about-content {
     margin-top: 20px; }
 
 .team {
-  padding: 5% 20%; }
+  padding: 10% 20%; }
   .team .team-people {
     flex-wrap: wrap;
     position: relative;
     z-index: 0; }
     .team .team-people .person {
       width: 24%;
-      margin-top: 20px; }
+      margin-top: 20px;
+      cursor: pointer; }
       .team .team-people .person:hover .content {
         display: block;
         z-index: 2; }
@@ -114,11 +152,14 @@
         border: 1px solid #8d8d8d; }
 
 .monkey-banner {
-  padding: 8% 0;
-  position: relative;
-  background-color: #46c8c8; }
-  .monkey-banner h2:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../images/monkey.jpg"); }
+  .monkey-banner h1:nth-child(2) {
     color: white; }
+  .monkey-banner img {
+    display: none; }
 
 .clients {
   padding: 5% 10%;

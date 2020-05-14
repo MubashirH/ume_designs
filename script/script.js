@@ -1,14 +1,18 @@
 function grid() {
     var width = $('.grid-inner').width();
-    console.log(width);
     $('.grid-inner').css('height',width);
 }
 
 $(document).ready(function (){
-
+    $('.brand-include').hide();
     //gird section height
+    var monkey_height = $('.monkey-banner img').height();
+    $('.monkey-banner').css('height', monkey_height);
     grid();
-    $(window).resize(function(){ grid(); });
+    $(window).resize(function(){ 
+        grid();        
+        $('.monkey-banner').css('height', monkey_height);
+     });
     //menu intialization
      var hamburger = $('#hamburger-icon');
      hamburger.click(function () {
@@ -27,6 +31,24 @@ $(document).ready(function (){
              }, 1000);
          }
          return false;
+     });
+
+     //brand grid loading
+     $('.grid-section').click(function(){
+         var count = $('div.grid-display').length;
+         var gridSection = $('.grid-display');
+         if ( count === 1) {
+            $('.brand-include').hide();
+             $('div.grid-section').addClass('grid-display');
+         }
+         else {
+              gridSection.removeClass('grid-display');
+              $(this).addClass('grid-display');
+              if ($(this).attr('id') === 'brandId') {
+                  console.log(1);
+                  $('.brand-include').show();
+              }
+         }
      });
 
      //swiper slider initializing

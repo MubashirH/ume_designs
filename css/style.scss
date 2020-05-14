@@ -6,7 +6,7 @@
 .semi-bold { font-weight: 600; }
 .bold { font-weight: 700; }
 
-
+* { letter-spacing: 1px; }
 
 
 
@@ -19,7 +19,7 @@
 /*initiate*/
 .initiate {
     background-color: #1d9cdf;
-    h2, h3 {
+    h1, h3 {
         color: white;
     }
     .inner-border {
@@ -45,8 +45,11 @@
     .services-grid {
         flex-wrap: wrap;
         justify-content: space-evenly;
+        .grid-display { display: flex !important;}
         .grid-section{
             width: 30%;
+            display: none;
+            cursor: pointer;
             margin: 10px 10px;
             &:nth-child(1) { .grid-inner {background-color: #46c8c8;}}
             &:nth-child(2) { .grid-inner {background-color: #c4abd3;}}
@@ -58,11 +61,38 @@
             &:nth-child(8) { .grid-inner {background-color: #e7abab;}}
             &:nth-child(9) { .grid-inner {background-color: #e3dbb7;}}
             .grid-inner { 
-                width: 100%;
-                margin: 10px 0px;        
-                flex-direction: column;
-                align-items: center;
-                justify-content: center; }
+                position: relative;
+                display: table;
+                width: 100%;  
+                padding-bottom: 12px;
+                img {
+                    opacity: 0.5;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -60%);
+                }
+                h1 { 
+                    display: none; 
+                    transition: 300ms ease-in-out;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 0px;
+                    opacity: 0;
+                    color: white;
+                }
+                .text {
+                    display: table-cell;
+                    vertical-align: bottom;
+                }
+                h2 { color: white; transition: 300ms ease-in-out;}
+            }
+            &:hover {
+                img { opacity: 1;}
+                h2 { color:  black;}
+                h1 { display: block; opacity: 0.7;}
+                .grid-inner { box-shadow: inset -4px 2px 20px 0px rgba(128, 128, 128, 0.705); }
+            }
         }
     }
 }
@@ -71,6 +101,7 @@
 .about {
     padding: 5% 10%;
     background-color: #f6f6f6;
+    h1, h4, p { opacity: 0.7; }
     .about-content {
         margin-top: 20px;
     }
@@ -78,7 +109,7 @@
 
 //Team Section 
 .team {
-    padding: 5% 20%;
+    padding: 10% 20%;
     .team-people {
         flex-wrap: wrap;
         position: relative;
@@ -86,6 +117,7 @@
         .person {
             width: 24%;
             margin-top: 20px;
+            cursor: pointer;
             &:hover {
                 .content { display: block; z-index: 2;}
                 img { filter: none;}
@@ -116,10 +148,12 @@
 
 //MOnkey Banner Section
 .monkey-banner{
-    padding: 8% 0;
-    position: relative;
-    background-color: #46c8c8 ;
-    h2:nth-child(2) { color: white;}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/monkey.jpg'); ;
+    h1:nth-child(2) { color: white;}
+    img { display: none; }
     
 }
 
