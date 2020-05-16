@@ -1,16 +1,19 @@
 function grid() {
     var width = $('.grid-inner').width();
     $('.grid-inner').css('height', width);
+    $('.brand-include').css('height', width);
 }
 
 $(document).ready(function () {
     $('.brand-include').hide();
+    $('.menu ul').hide();
     //gird section height
     var monkey_height = $('.monkey-banner img').height();
     $('.monkey-banner').css('height', monkey_height);
     grid();
     $(window).resize(function () {
         grid();
+        var monkey_height = $('.monkey-banner img').height();
         $('.monkey-banner').css('height', monkey_height);
     });
     //menu intialization
@@ -19,16 +22,18 @@ $(document).ready(function () {
         hamburger.toggleClass('active');
         var hamburgerClass = hamburger.attr('class');
         if (hamburgerClass === 'active') {
-            $(".menu-content").css('display', 'block');
-            $(".menu-content").removeClass('fadeOutUp');
-            $(".menu-content").addClass('fadeInDown');
+            $('.menu ul').show();
+            setTimeout(function() {
+                $('.menu').addClass('shadow')
+            }, 200)
+            $('.menu ul').addClass('animate__fadeInDown');
+            $('.menu ul').removeClass('animate__fadeOutUp');
         }
         else {
-            $(".menu-content").removeClass('fadeInDown');
-            $(".menu-content").addClass('fadeOutUp');
-            setTimeout(function () {
-                $(".menu-content").css('display', 'none');
-            }, 1000);
+            $('.menu ul').hide();
+            $('.menu').removeClass('shadow');
+            $(".menu ul").removeClass('animate__fadeInDown');
+            $(".menu ul").addClass('animate__fadeOutUp');
         }
         return false;
     });
@@ -41,11 +46,13 @@ $(document).ready(function () {
             $('.brand-include').hide();
             $('div.grid-section').addClass('grid-display');
             $('.grid-inner h1').text('+');
+            $('.services-grid').css('justify-content','space-evenly');
         }
         else {
             gridSection.removeClass('grid-display');
             $(this).addClass('grid-display');
             $('.grid-inner h1').text('-');
+            $('.services-grid').css('justify-content','space-between');
             if ($(this).attr('id') === 'brandId') {
                 console.log(1);
                 $('.brand-include').show();
@@ -93,7 +100,7 @@ $(document).ready(function () {
     var client_view_slider = new Swiper('.client-view-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        centeredSlides:true,
+        centeredSlides: true,
         loop: true,
         grabCursor: true,
         autoPlay: {

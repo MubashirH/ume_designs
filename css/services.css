@@ -1,0 +1,21 @@
+.brand-include {
+  display: flex;
+  border: 1px solid grey;
+  margin: 10px;
+  overflow: hidden;
+  justify-content: center; }
+  .brand-include img {
+    height: 100%; }
+  .brand-include:nth-child(2) {
+    flex-grow: 1; }
+  .brand-include:nth-child(3) {
+    width: 65%; }
+  .brand-include:nth-child(4) {
+    width: 30%; }
+  .brand-include:nth-child(5), .brand-include:nth-child(6), .brand-include:nth-child(7) {
+    width: 30%; }
+  .brand-include:nth-child(8) {
+    height: 200%;
+    float: right; }
+
+/*# sourceMappingURL=services.css.map */
