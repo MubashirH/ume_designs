@@ -8,13 +8,13 @@ function grid() {
 $(window).scroll(function windowScroll() {
     if ( $(window).scrollTop() > 50) {
         $('.logo').css('justify-content','flex-start');
-        $('.logo').children('img').css('width','15%');
+        $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
         $('.menu').css('right','5%')
     }
     else {
         $('.logo').css('justify-content','center');
-        $('.logo').children('img').css('width','45%');
-        $('.menu').css('right','15%')
+        $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
+        $('.menu').css('right','10%')
     }
 });
 

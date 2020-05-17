@@ -53,7 +53,6 @@ h1 {
         img {
             transition: all 200ms ease-in-out;
             width: 45%;
-            margin-left: 50px;
         }
         .shadow {
             transition: all ease-in-out ;
@@ -61,12 +60,13 @@ h1 {
         .menu {
             position: absolute;
             transition: all 200ms ease-in-out;
-            right: 15%;
+            right: 10%;
             top: 0px;
             padding: 10px 30px;
             padding-top: 20px;
+            padding-right: 50px;
             background-color: rgba(255, 255, 255, 0.733);
-            a {
+            #hamburger-icon {
                 float: right;
             }
             ul {
@@ -76,9 +76,13 @@ h1 {
                 list-style: none;
                 li{
                     margin: 15px 0;
-                    font-weight: 600;
-                    opacity: 0.7;
-                    letter-spacing: normal;
+                    a {
+                        font-weight: 600;
+                        letter-spacing: normal;
+                        color: black;
+                        opacity: 0.7;
+                        text-decoration: none;
+                    }
                 }
             }
         }

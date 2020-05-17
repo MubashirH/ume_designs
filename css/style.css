@@ -45,20 +45,20 @@ h1 {
     justify-content: center; }
     .header .logo img {
       transition: all 200ms ease-in-out;
-      width: 45%;
-      margin-left: 50px; }
+      width: 45%; }
     .header .logo .shadow {
       transition: all ease-in-out;
       box-shadow: -12px -2px 0px 0px #0000002e !important; }
     .header .logo .menu {
       position: absolute;
       transition: all 200ms ease-in-out;
-      right: 15%;
+      right: 10%;
       top: 0px;
       padding: 10px 30px;
       padding-top: 20px;
+      padding-right: 50px;
       background-color: rgba(255, 255, 255, 0.733); }
-      .header .logo .menu a {
+      .header .logo .menu #hamburger-icon {
         float: right; }
       .header .logo .menu ul {
         display: none;
@@ -66,10 +66,13 @@ h1 {
         padding: 0px;
         list-style: none; }
         .header .logo .menu ul li {
-          margin: 15px 0;
-          font-weight: 600;
-          opacity: 0.7;
-          letter-spacing: normal; }
+          margin: 15px 0; }
+          .header .logo .menu ul li a {
+            font-weight: 600;
+            letter-spacing: normal;
+            color: black;
+            opacity: 0.7;
+            text-decoration: none; }
 
 /*initiate*/
 .initiate {
