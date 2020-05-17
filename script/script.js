@@ -4,7 +4,30 @@ function grid() {
     $('.brand-include').css('height', width);
 }
 
+//window scroll function for header logo
+$(window).scroll(function windowScroll() {
+    if ( $(window).scrollTop() > 50) {
+        $('.logo').css('justify-content','flex-start');
+        $('.logo').children('img').css('width','15%');
+        $('.menu').css('right','5%')
+    }
+    else {
+        $('.logo').css('justify-content','center');
+        $('.logo').children('img').css('width','45%');
+        $('.menu').css('right','15%')
+    }
+});
+
+
+
+// Document Ready
 $(document).ready(function () {
+
+    var headerHeight = $('.header').height();
+    $('.initiate').css('margin-top',headerHeight);
+    
+
+
     $('.brand-include').hide();
     $('.menu ul').hide();
     //gird section height
@@ -46,13 +69,15 @@ $(document).ready(function () {
             $('.brand-include').hide();
             $('div.grid-section').addClass('grid-display');
             $('.grid-inner h1').text('+');
-            $('.services-grid').css('justify-content','space-evenly');
+            // $('.services-grid').css('justify-content','space-evenly');
+            $('.grid-display').attr('data-aos','fade-up')
         }
         else {
             gridSection.removeClass('grid-display');
             $(this).addClass('grid-display');
+            $(this).attr('data-aos','');
             $('.grid-inner h1').text('-');
-            $('.services-grid').css('justify-content','space-between');
+            // $('.services-grid').css('justify-content','space-between');
             if ($(this).attr('id') === 'brandId') {
                 console.log(1);
                 $('.brand-include').show();

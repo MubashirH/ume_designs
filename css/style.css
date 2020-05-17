@@ -29,32 +29,51 @@ h1 {
   100% {
     opacity: 1;
     scale: 1.3; } }
-.logo img {
-  width: 35%; }
-.logo .shadow {
-  transition: all ease-in-out;
-  box-shadow: -12px -2px 0px 0px #0000002e !important; }
-.logo .menu {
-  position: absolute;
-  right: 15%;
-  top: 0px;
-  padding: 10px 30px;
-  padding-top: 20px;
-  background-color: rgba(255, 255, 255, 0.733); }
-  .logo .menu a {
-    float: right; }
-  .logo .menu ul {
-    display: none;
-    margin-top: 30px;
-    padding: 0px;
-    list-style: none; }
-    .logo .menu ul li {
-      margin: 15px 0;
-      font-weight: 600;
-      opacity: 0.7; }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000; }
+  .header #logo-small {
+    justify-content: flex-start; }
+    .header #logo-small img {
+      width: 15%; }
+    .header #logo-small .menu {
+      right: 5%; }
+  .header .logo {
+    justify-content: center; }
+    .header .logo img {
+      transition: all 200ms ease-in-out;
+      width: 45%;
+      margin-left: 50px; }
+    .header .logo .shadow {
+      transition: all ease-in-out;
+      box-shadow: -12px -2px 0px 0px #0000002e !important; }
+    .header .logo .menu {
+      position: absolute;
+      transition: all 200ms ease-in-out;
+      right: 15%;
+      top: 0px;
+      padding: 10px 30px;
+      padding-top: 20px;
+      background-color: rgba(255, 255, 255, 0.733); }
+      .header .logo .menu a {
+        float: right; }
+      .header .logo .menu ul {
+        display: none;
+        margin-top: 30px;
+        padding: 0px;
+        list-style: none; }
+        .header .logo .menu ul li {
+          margin: 15px 0;
+          font-weight: 600;
+          opacity: 0.7;
+          letter-spacing: normal; }
 
 /*initiate*/
 .initiate {
+  padding: 5% 0;
   background-color: #1d9cdf; }
   .initiate h1,
   .initiate h3 {
@@ -64,8 +83,8 @@ h1 {
     border-radius: 100%;
     flex-direction: column;
     cursor: pointer;
-    height: 180px;
-    width: 180px;
+    height: 190px;
+    width: 190px;
     justify-content: center;
     transition: all 200ms ease-in-out; }
     .initiate .inner-border:hover {
@@ -94,7 +113,7 @@ h1 {
       width: 30%;
       display: none;
       cursor: pointer;
-      margin: 10px 10px; }
+      margin: 15px 10px; }
       .services .services-grid .grid-section .color1 {
         background-color: #46c8c8; }
       .services .services-grid .grid-section .color2 {
@@ -149,7 +168,7 @@ h1 {
         box-shadow: inset -4px 2px 20px 0px rgba(128, 128, 128, 0.705); }
 
 .about {
-  padding: 5% 10%;
+  padding: 5% 12%;
   background-color: #f6f6f6; }
   .about h4 {
     margin-top: 20px; }
@@ -160,7 +179,7 @@ h1 {
     margin-top: 20px; }
 
 .team {
-  padding: 10% 20%; }
+  padding: 5% 20%; }
   .team .team-people {
     flex-wrap: wrap;
     position: relative;
@@ -172,7 +191,7 @@ h1 {
       .team .team-people .person:hover .content {
         display: block;
         z-index: 2;
-        transition: all 150ms ease-in-out; }
+        transition: all 300ms ease-in-out; }
       .team .team-people .person:hover img {
         filter: none; }
       .team .team-people .person:hover .name {
@@ -183,7 +202,6 @@ h1 {
       .team .team-people .person img {
         filter: grayscale(1);
         transition: 300ms ease-in-out;
-        width: 75%;
         position: relative;
         left: 50%;
         transform: translateX(-50%); }
@@ -193,7 +211,7 @@ h1 {
         display: none;
         z-index: 1000;
         left: 50%;
-        transition: all 150ms ease-in-out;
+        transition: all 300ms ease-in-out;
         transform: translateX(-50%);
         width: 100%;
         margin: 0 auto;
@@ -257,6 +275,9 @@ h1 {
 
 .contact {
   padding: 5% 10%; }
+  .contact a {
+    margin: 0;
+    color: #1d9cdf; }
   .contact form {
     display: flex;
     flex-direction: column;
