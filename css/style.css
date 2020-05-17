@@ -44,6 +44,7 @@ h1 {
   .logo .menu a {
     float: right; }
   .logo .menu ul {
+    display: none;
     margin-top: 30px;
     padding: 0px;
     list-style: none; }
@@ -65,7 +66,13 @@ h1 {
     cursor: pointer;
     height: 180px;
     width: 180px;
-    justify-content: center; }
+    justify-content: center;
+    transition: all 200ms ease-in-out; }
+    .initiate .inner-border:hover {
+      border-right: 1px solid white;
+      border-left: 1px solid white;
+      transform: scale(1.04) !important;
+      transition: all 200ms ease-in-out; }
     .initiate .inner-border:nth-child(1) img {
       height: 30%; }
     .initiate .inner-border img {
@@ -164,7 +171,8 @@ h1 {
       cursor: pointer; }
       .team .team-people .person:hover .content {
         display: block;
-        z-index: 2; }
+        z-index: 2;
+        transition: all 150ms ease-in-out; }
       .team .team-people .person:hover img {
         filter: none; }
       .team .team-people .person:hover .name {
@@ -185,6 +193,7 @@ h1 {
         display: none;
         z-index: 1000;
         left: 50%;
+        transition: all 150ms ease-in-out;
         transform: translateX(-50%);
         width: 100%;
         margin: 0 auto;

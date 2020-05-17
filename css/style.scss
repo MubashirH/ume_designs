@@ -55,6 +55,7 @@ h1 {
             float: right;
         }
         ul {
+            display: none;
             margin-top: 30px;
             padding: 0px;
             list-style: none;
@@ -82,6 +83,13 @@ h1 {
         height: 180px;
         width: 180px;
         justify-content: center;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+            transform: scale(1.04) !important;
+            transition: all 200ms ease-in-out;
+        }
         &:nth-child(1) {
             img {
                 height: 30%;
@@ -220,6 +228,7 @@ h1 {
                 .content {
                     display: block;
                     z-index: 2;
+                    transition: all 150ms ease-in-out;
                 }
                 img {
                     filter: none;
@@ -245,6 +254,7 @@ h1 {
                 display: none;
                 z-index: 1000;
                 left: 50%;
+                transition: all 150ms ease-in-out;
                 transform: translateX(-50%);
                 width: 100%;
                 margin: 0 auto;
