@@ -1,3 +1,35 @@
+//mixing for mediaqueries
+@mixin breakpoint($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+ }
+
+
+ // h tags and p tags media queries
+ h1 {
+     @include breakpoint(1020) { font-size: 36px; }
+     @include breakpoint(900) {font-size: 34px; }
+ }
+ h2 {
+     @include breakpoint(1020) { font-size: 28px; }
+     @include breakpoint(900) { font-size: 26px; }
+ }
+ h3 {
+     @include breakpoint(1020) { font-size: 24px; }
+     @include breakpoint(900) { font-size: 22px; }
+ }
+ h4 {
+     @include breakpoint(1020) { font-size: 21px; }
+     @include breakpoint(900) { font-size: 19px; }
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+
+
 //font-styles and weights
 .font-mont {
     font-family: "Montserrat", sans-serif;
@@ -62,10 +94,11 @@ h1 {
             transition: all 200ms ease-in-out;
             right: 10%;
             top: 0px;
-            padding: 10px 30px;
+            padding-left: 30px;
             padding-top: 20px;
             padding-right: 50px;
             background-color: rgba(255, 255, 255, 0.733);
+            @include breakpoint(1020) { right: 5% !important;}
             #hamburger-icon {
                 float: right;
             }
@@ -106,11 +139,15 @@ h1 {
         width: 190px;
         justify-content: center;
         transition: all 200ms ease-in-out;
+        @include breakpoint(900) {
+            height: 150px;
+            width: 150px;
+        }
         &:hover {
-            border-right: 1px solid white;
-            border-left: 1px solid white;
             transform: scale(1.04) !important;
             transition: all 200ms ease-in-out;
+            border-right: 1px solid white;
+            border-left: 1px solid white;
         }
         &:nth-child(1) {
             img {
@@ -132,6 +169,7 @@ h1 {
 .services {
     margin-bottom: 30px;
     padding: 5% 10%;
+    @include breakpoint(1200) {  padding: 5% 5%; }
     .services-grid {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -143,6 +181,9 @@ h1 {
             display: none;
             cursor: pointer;
             margin: 15px 10px;
+            @include breakpoint(768) {
+                width: 45%;
+            }
             .color1 {
                 background-color: #46c8c8;
             }
@@ -181,6 +222,9 @@ h1 {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -60%);
+                    @include breakpoint(1020) {
+                        height: 40%;
+                    }
                 }
                 h1 {
                     display: none;
@@ -223,12 +267,16 @@ h1 {
 .about {
     padding: 5% 12%;
     background-color: #f6f6f6;
+    @include breakpoint(1200) {
+        padding: 5% 5%;
+    }
     h4 {
         margin-top: 20px;
     }
     h4,
     h5 {
         opacity: 0.7;
+        word-wrap: break-word;
     }
     .about-content {
         margin-top: 20px;
@@ -238,6 +286,8 @@ h1 {
 //Team Section
 .team {
     padding: 5% 20%;
+    @include breakpoint(1200) { padding: 5% 15%; }
+    @include breakpoint(1020) { padding: 5% 10%; }
     .team-people {
         flex-wrap: wrap;
         position: relative;
@@ -247,6 +297,8 @@ h1 {
             margin-top: 40px;
             cursor: pointer;
             &:hover {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) { .content {top: 50% }}
+                &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) { .content {top: 100%}}
                 .content {
                     display: block;
                     z-index: 2;
@@ -260,6 +312,7 @@ h1 {
                     color: white;
                     margin: 0;
                     padding: 5px 15px;
+                    position: absolute;
                 }
             }
             img {
@@ -268,6 +321,7 @@ h1 {
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
+                @include breakpoint(900) { width: 80%;}
             }
             .content {
                 position: absolute;
@@ -296,11 +350,14 @@ h1 {
     flex-direction: column;
     justify-content: center;
     background-image: url("../images/monkey.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
     h1:nth-child(2) {
         color: white;
     }
     img {
         display: none;
+        width: 100%;
     }
 }
 
@@ -308,6 +365,9 @@ h1 {
 .clients {
     padding: 5% 10%;
     background-color: #f6f6f6;
+    @include breakpoint(1200) {
+        padding: 5% 5%;
+    }
     .views {
         color: #5f5f5f;
         border-top: 1px solid black;
@@ -362,6 +422,9 @@ h1 {
 //Contact Section
 .contact {
     padding: 5% 10%;
+    @include breakpoint(1200) {
+        padding: 5% 5%;
+    }
     a {
         margin: 0;
         color: #1d9cdf;
@@ -420,12 +483,18 @@ h1 {
 .social {
     padding: 5% 10%;
     background-color: #f6f6f6;
+    @include breakpoint(1200) {
+        padding: 5% 5%;
+    }
 }
 
 //footer section
 footer {
     background-color: #5c5c5c;
     padding: 5% 10%;
+    @include breakpoint(1200) {
+        padding: 5% 5%;
+    }
     .blue {
         color: #1d9cdf;
     }
@@ -434,6 +503,7 @@ footer {
     }
     .address,
     .follow {
+        word-wrap: break-word;
         flex-direction: column;
         justify-content: space-between;
         .blue {
@@ -444,6 +514,9 @@ footer {
         }
     }
     .follow {
+        @include breakpoint(768) {
+            margin-top: 20px;
+        }
         input {
             border-radius: 50px;
             padding: 5px;
@@ -454,6 +527,9 @@ footer {
         }
     }
     .site-map {
+        @include breakpoint(768) {
+            margin-top: 20px;
+        }
         ul {
             list-style: none;
             padding: 0px;

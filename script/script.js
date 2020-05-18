@@ -9,14 +9,15 @@ $(window).scroll(function windowScroll() {
     if ( $(window).scrollTop() > 50) {
         $('.logo').css('justify-content','flex-start');
         $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
-        $('.menu').css('right','5%')
+        $('.menu').css({'right':'5%', 'padding-top':'5px'});
     }
     else {
         $('.logo').css('justify-content','center');
         $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
-        $('.menu').css('right','10%')
+        $('.menu').css({'right':'10%', 'padding-top':'20px'})
     }
 });
+
 
 
 
@@ -48,12 +49,14 @@ $(document).ready(function () {
             $('.menu ul').show();
             setTimeout(function() {
                 $('.menu').addClass('shadow')
-            }, 200)
+            }, 200);
+            $('.menu').css('padding-bottom','10px');
             $('.menu ul').addClass('animate__fadeInDown');
             $('.menu ul').removeClass('animate__fadeOutUp');
         }
         else {
             $('.menu ul').hide();
+            $('.menu').css('padding-bottom','0px');
             $('.menu').removeClass('shadow');
             $(".menu ul").removeClass('animate__fadeInDown');
             $(".menu ul").addClass('animate__fadeOutUp');
@@ -107,10 +110,8 @@ $(document).ready(function () {
                 spaceBetween: 30
             },
             768: {
-                slidesPerView: 2
-            },
-            600: {
-                spaceBetween: 10
+                slidesPerView: 2,
+                spaceBetween: 5
             },
             480: {
                 slidesPerView: 1

@@ -1,3 +1,34 @@
+@media (max-width: 1020px) {
+  h1 {
+    font-size: 36px; } }
+@media (max-width: 900px) {
+  h1 {
+    font-size: 34px; } }
+
+@media (max-width: 1020px) {
+  h2 {
+    font-size: 28px; } }
+@media (max-width: 900px) {
+  h2 {
+    font-size: 26px; } }
+
+@media (max-width: 1020px) {
+  h3 {
+    font-size: 24px; } }
+@media (max-width: 900px) {
+  h3 {
+    font-size: 22px; } }
+
+@media (max-width: 1020px) {
+  h4 {
+    font-size: 21px; } }
+@media (max-width: 900px) {
+  h4 {
+    font-size: 19px; } }
+
+html {
+  scroll-behavior: smooth; }
+
 .font-mont {
   font-family: "Montserrat", sans-serif; }
 
@@ -54,10 +85,13 @@ h1 {
       transition: all 200ms ease-in-out;
       right: 10%;
       top: 0px;
-      padding: 10px 30px;
+      padding-left: 30px;
       padding-top: 20px;
       padding-right: 50px;
       background-color: rgba(255, 255, 255, 0.733); }
+      @media (max-width: 1020px) {
+        .header .logo .menu {
+          right: 5% !important; } }
       .header .logo .menu #hamburger-icon {
         float: right; }
       .header .logo .menu ul {
@@ -90,11 +124,15 @@ h1 {
     width: 190px;
     justify-content: center;
     transition: all 200ms ease-in-out; }
+    @media (max-width: 900px) {
+      .initiate .inner-border {
+        height: 150px;
+        width: 150px; } }
     .initiate .inner-border:hover {
-      border-right: 1px solid white;
-      border-left: 1px solid white;
       transform: scale(1.04) !important;
-      transition: all 200ms ease-in-out; }
+      transition: all 200ms ease-in-out;
+      border-right: 1px solid white;
+      border-left: 1px solid white; }
     .initiate .inner-border:nth-child(1) img {
       height: 30%; }
     .initiate .inner-border img {
@@ -107,6 +145,9 @@ h1 {
 .services {
   margin-bottom: 30px;
   padding: 5% 10%; }
+  @media (max-width: 1200px) {
+    .services {
+      padding: 5% 5%; } }
   .services .services-grid {
     flex-wrap: wrap;
     justify-content: space-evenly; }
@@ -117,6 +158,9 @@ h1 {
       display: none;
       cursor: pointer;
       margin: 15px 10px; }
+      @media (max-width: 768px) {
+        .services .services-grid .grid-section {
+          width: 45%; } }
       .services .services-grid .grid-section .color1 {
         background-color: #46c8c8; }
       .services .services-grid .grid-section .color2 {
@@ -146,6 +190,9 @@ h1 {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -60%); }
+          @media (max-width: 1020px) {
+            .services .services-grid .grid-section .grid-inner img {
+              height: 40%; } }
         .services .services-grid .grid-section .grid-inner h1 {
           display: none;
           transition: 300ms ease-in-out;
@@ -173,16 +220,26 @@ h1 {
 .about {
   padding: 5% 12%;
   background-color: #f6f6f6; }
+  @media (max-width: 1200px) {
+    .about {
+      padding: 5% 5%; } }
   .about h4 {
     margin-top: 20px; }
   .about h4,
   .about h5 {
-    opacity: 0.7; }
+    opacity: 0.7;
+    word-wrap: break-word; }
   .about .about-content {
     margin-top: 20px; }
 
 .team {
   padding: 5% 20%; }
+  @media (max-width: 1200px) {
+    .team {
+      padding: 5% 15%; } }
+  @media (max-width: 1020px) {
+    .team {
+      padding: 5% 10%; } }
   .team .team-people {
     flex-wrap: wrap;
     position: relative;
@@ -191,6 +248,10 @@ h1 {
       width: 24%;
       margin-top: 40px;
       cursor: pointer; }
+      .team .team-people .person:hover:nth-child(1) .content, .team .team-people .person:hover:nth-child(2) .content, .team .team-people .person:hover:nth-child(3) .content, .team .team-people .person:hover:nth-child(4) .content {
+        top: 50%; }
+      .team .team-people .person:hover:nth-child(5) .content, .team .team-people .person:hover:nth-child(6) .content, .team .team-people .person:hover:nth-child(7) .content, .team .team-people .person:hover:nth-child(8) .content {
+        top: 100%; }
       .team .team-people .person:hover .content {
         display: block;
         z-index: 2;
@@ -201,13 +262,17 @@ h1 {
         background-color: #1d9cdf;
         color: white;
         margin: 0;
-        padding: 5px 15px; }
+        padding: 5px 15px;
+        position: absolute; }
       .team .team-people .person img {
         filter: grayscale(1);
         transition: 300ms ease-in-out;
         position: relative;
         left: 50%;
         transform: translateX(-50%); }
+        @media (max-width: 900px) {
+          .team .team-people .person img {
+            width: 80%; } }
       .team .team-people .person .content {
         position: absolute;
         padding: 5%;
@@ -228,15 +293,21 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("../images/monkey.jpg"); }
+  background-image: url("../images/monkey.jpg");
+  background-size: contain;
+  background-repeat: no-repeat; }
   .monkey-banner h1:nth-child(2) {
     color: white; }
   .monkey-banner img {
-    display: none; }
+    display: none;
+    width: 100%; }
 
 .clients {
   padding: 5% 10%;
   background-color: #f6f6f6; }
+  @media (max-width: 1200px) {
+    .clients {
+      padding: 5% 5%; } }
   .clients .views {
     color: #5f5f5f;
     border-top: 1px solid black;
@@ -278,6 +349,9 @@ h1 {
 
 .contact {
   padding: 5% 10%; }
+  @media (max-width: 1200px) {
+    .contact {
+      padding: 5% 5%; } }
   .contact a {
     margin: 0;
     color: #1d9cdf; }
@@ -326,16 +400,23 @@ h1 {
 .social {
   padding: 5% 10%;
   background-color: #f6f6f6; }
+  @media (max-width: 1200px) {
+    .social {
+      padding: 5% 5%; } }
 
 footer {
   background-color: #5c5c5c;
   padding: 5% 10%; }
+  @media (max-width: 1200px) {
+    footer {
+      padding: 5% 5%; } }
   footer .blue {
     color: #1d9cdf; }
   footer span {
     font-size: 13px; }
   footer .address,
   footer .follow {
+    word-wrap: break-word;
     flex-direction: column;
     justify-content: space-between; }
     footer .address .blue,
@@ -344,12 +425,18 @@ footer {
     footer .address span,
     footer .follow span {
       color: white; }
+  @media (max-width: 768px) {
+    footer .follow {
+      margin-top: 20px; } }
   footer .follow input {
     border-radius: 50px;
     padding: 5px;
     border-color: transparent; }
   footer .follow input[type="text"] {
     text-align: right; }
+  @media (max-width: 768px) {
+    footer .site-map {
+      margin-top: 20px; } }
   footer .site-map ul {
     list-style: none;
     padding: 0px;

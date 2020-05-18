@@ -1,3 +1,11 @@
+//mixing of media queries
+@mixin breakpoint($screen) {
+    @media (max-width: $screen +'px') {
+        @content;
+    }
+}
+
+
 .brand-logos {
     display: flex;
     border: 1px solid grey;
@@ -9,32 +17,38 @@
 
 //left brand
 section.left-brand {
-    &:nth-of-type(1) { width: 64.5%; }
-    &:nth-of-type(2) { width: 64.5%; }
-    &:nth-of-type(3) {  width: 30.5%; }
-    &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6){ width: 30.5%; }
+    &:nth-of-type(1), &:nth-of-type(2) { width: 64.5%; }
+    &:nth-of-type(3), &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6){ width: 30.5%; }
     &:nth-of-type(7) {
         height: 200%;
         float: right;
+    }
+    @include breakpoint(768) {
+        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6) { width: 45%;}
+        &:nth-of-type(2) { width: 95%; }
     }
 }
 
 //center brand
 section.center-brand {
-    &:nth-of-type(1), &:nth-of-type(2) { width: 30.5%;}
-    &:nth-of-type(3) { width: 30.5%; }
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7) { width: 30.5%;}
     &:nth-of-type(4) { width: 64.5%; }
-    &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7) { width: 30.5%;}
+    @include breakpoint(768) {
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7) { width: 45%;}
+        &:nth-of-type(4) { width: 95%; }
+    }
 }
 
 //right brand
 section.right-brand {
-    &:nth-of-type(1) { width: 64.5% }
-    &:nth-of-type(2) { width: 64.5%; }
-    &:nth-of-type(3) {  width: 30.5%; }
-    &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6){ width: 30.5%; }
+    &:nth-of-type(1), &:nth-of-type(2) { width: 64.5%; }
+    &:nth-of-type(3), &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6){ width: 30.5%; }
     &:nth-of-type(7) {
         height: 200%;
         float: right;
+    }
+    @include breakpoint(768) {
+        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(4) , &:nth-of-type(5), &:nth-of-type(6) { width: 45%;}
+        &:nth-of-type(2) { width: 95%; }
     }
 }
