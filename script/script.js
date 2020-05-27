@@ -1,18 +1,41 @@
 
 
 //window scroll function for header logo
-// $(window).scroll(function windowScroll() {
-//     if ( $(window).scrollTop() > 50) {
-//         $('.logo').css('justify-content','flex-start');
-//         $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
-//         $('.menu').css({'right':'5%', 'padding-top':'5px'});
-//     }
-//     else {
-//         $('.logo').css('justify-content','center');
-//         $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
-//         $('.menu').css({'right':'10%', 'padding-top':'20px'})
-//     }
-// });
+$(window).scroll(function windowScroll() {
+    var windowSize = $(window).width();
+    if ( $(window).scrollTop() > 50) {
+        $('.logo').css('justify-content','flex-start');
+        $('.menu').css({'right':'5%', 'padding-top':'5px'});
+    }
+    else {
+        $('.logo').css('justify-content','center');
+        $('.menu').css({'right':'10%', 'padding-top':'20px'})
+    }
+    if ( windowSize > 900) {
+        if ( $(window).scrollTop() > 50) {
+            $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
+        }
+        else {
+            $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
+        }
+    }
+    else if ( windowSize > 600 && windowSize <= 900) {
+        if ( $(window).scrollTop() > 50) {
+            $('.logo').children('img').css({'width':'20%', 'margin-left':'50px'});
+        }
+        else {
+            $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
+        }
+    }
+    else if (windowSize <= 600) {
+        if ( $(window).scrollTop() > 50) {
+            $('.logo').children('img').css({'width':'25%', 'margin-left':'50px'});
+        }
+        else {
+            $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
+        }
+    }
+});
 
 
 
