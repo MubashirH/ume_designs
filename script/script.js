@@ -1,22 +1,18 @@
-function grid() {
-    var width = $('.grid-inner').width();
-    $('.grid-inner').css('height', width);
-    $('.brand-include').css('height', width);
-}
+
 
 //window scroll function for header logo
-$(window).scroll(function windowScroll() {
-    if ( $(window).scrollTop() > 50) {
-        $('.logo').css('justify-content','flex-start');
-        $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
-        $('.menu').css({'right':'5%', 'padding-top':'5px'});
-    }
-    else {
-        $('.logo').css('justify-content','center');
-        $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
-        $('.menu').css({'right':'10%', 'padding-top':'20px'})
-    }
-});
+// $(window).scroll(function windowScroll() {
+//     if ( $(window).scrollTop() > 50) {
+//         $('.logo').css('justify-content','flex-start');
+//         $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
+//         $('.menu').css({'right':'5%', 'padding-top':'5px'});
+//     }
+//     else {
+//         $('.logo').css('justify-content','center');
+//         $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
+//         $('.menu').css({'right':'10%', 'padding-top':'20px'})
+//     }
+// });
 
 
 
@@ -24,21 +20,28 @@ $(window).scroll(function windowScroll() {
 // Document Ready
 $(document).ready(function () {
 
+    function grid() {
+        var width = $('.grid-inner').width();
+        $('.grid-inner').css('height', width);
+        $('.brand-include').css('height', width);
+    }
+    grid();
+    
+
     var headerHeight = $('.header').height();
     $('.initiate').css('margin-top',headerHeight);
     
-
 
     $('.brand-include').hide();
     $('.menu ul').hide();
     //gird section height
     var monkey_height = $('.monkey-banner img').height();
     $('.monkey-banner').css('height', monkey_height);
-    grid();
+    // grid();
     $(window).resize(function () {
         grid();
-        var monkey_height = $('.monkey-banner img').height();
-        $('.monkey-banner').css('height', monkey_height);
+        var monkey = $('.monkey-banner img').height();
+        $('.monkey-banner').css('height', monkey);
     });
     //menu intialization
     var hamburger = $('#hamburger-icon');
