@@ -146,6 +146,9 @@ h1 {
         .header .logo .menu {
           right: 0% !important;
           padding-right: 10px; } }
+      @media (max-width: 420px) {
+        .header .logo .menu {
+          padding-top: 10px; } }
       .header .logo .menu #hamburger-icon {
         float: right; }
       .header .logo .menu ul {

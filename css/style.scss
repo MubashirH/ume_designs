@@ -118,6 +118,7 @@ h1 {
             @include breakpoint(1020) { right: 5% !important;}
             @include breakpoint(768) {right: 2% !important; padding-right: 20px;}
             @include breakpoint(480) {right: 0% !important; padding-right: 10px;}
+            @include breakpoint(420) {padding-top: 10px;}
             #hamburger-icon {
                 float: right;
             }
