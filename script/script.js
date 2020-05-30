@@ -39,10 +39,12 @@ $(window).scroll(function windowScroll() {
     else if (windowSize <= 420) {
         if ( $(window).scrollTop() > 50) {
             $('.logo').children('img').css({'width':'30%', 'margin-left':'20px'});
+            $('.menu').css({'padding-top':'0px'});
         }
         else {
             $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
             $('.logo').css('justify-content','flex-start');
+            $('.menu').css({'padding-top':'10px'});
         }
     }
 });

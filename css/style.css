@@ -193,6 +193,10 @@ h1 {
       .initiate .inner-border {
         height: 100px;
         width: 100px; } }
+    @media (max-width: 420px) {
+      .initiate .inner-border {
+        height: 85px;
+        width: 85px; } }
     .initiate .inner-border:hover {
       transform: scale(1.04) !important;
       transition: all 200ms ease-in-out;
