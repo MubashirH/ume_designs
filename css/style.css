@@ -12,7 +12,10 @@
     font-size: 26px; } }
 @media (max-width: 480px) {
   h1 {
-    font-size: 24px; } }
+    font-size: 22px; } }
+@media (max-width: 420px) {
+  h1 {
+    font-size: 20px; } }
 
 @media (max-width: 1020px) {
   h2 {
@@ -114,6 +117,9 @@ h1 {
       right: 5%; }
   .header .logo {
     justify-content: center; }
+    @media (max-width: 600px) {
+      .header .logo {
+        justify-content: flex-start; } }
     .header .logo img {
       transition: all 200ms ease-in-out;
       width: 45%; }
@@ -136,6 +142,10 @@ h1 {
         .header .logo .menu {
           right: 2% !important;
           padding-right: 20px; } }
+      @media (max-width: 480px) {
+        .header .logo .menu {
+          right: 0% !important;
+          padding-right: 10px; } }
       .header .logo .menu #hamburger-icon {
         float: right; }
       .header .logo .menu ul {
@@ -156,6 +166,9 @@ h1 {
 .initiate {
   padding: 5% 0;
   background-color: #1d9cdf; }
+  @media (max-width: 600px) {
+    .initiate {
+      padding: 5%; } }
   .initiate h1,
   .initiate h3 {
     color: white; }
@@ -215,7 +228,7 @@ h1 {
           width: 45%; } }
       @media (max-width: 570px) {
         .services .services-grid .grid-section {
-          width: 90%; } }
+          margin: 10px 5px; } }
       .services .services-grid .grid-section .color1 {
         background-color: #46c8c8; }
       .services .services-grid .grid-section .color2 {
@@ -239,6 +252,9 @@ h1 {
         display: table;
         width: 100%;
         padding-bottom: 12px; }
+        @media (max-width: 600px) {
+          .services .services-grid .grid-section .grid-inner {
+            padding-bottom: 0px; } }
         .services .services-grid .grid-section .grid-inner img {
           opacity: 0.5;
           position: absolute;
@@ -248,6 +264,9 @@ h1 {
           @media (max-width: 1020px) {
             .services .services-grid .grid-section .grid-inner img {
               height: 40%; } }
+          @media (max-width: 480px) {
+            .services .services-grid .grid-section .grid-inner img {
+              transform: translate(-50%, -75%); } }
         .services .services-grid .grid-section .grid-inner h1 {
           display: none;
           transition: 300ms ease-in-out;
@@ -262,6 +281,12 @@ h1 {
         .services .services-grid .grid-section .grid-inner h2 {
           color: white;
           transition: 300ms ease-in-out; }
+          @media (max-width: 414px) {
+            .services .services-grid .grid-section .grid-inner h2 {
+              font-size: 14px; } }
+        @media (max-width: 375px) {
+          .services .services-grid .grid-section .grid-inner h4 {
+            font-size: 11px; } }
       .services .services-grid .grid-section:hover img {
         opacity: 1; }
       .services .services-grid .grid-section:hover h2 {
@@ -310,6 +335,7 @@ h1 {
     .team .team-people .person {
       width: 24%;
       margin-top: 40px;
+      position: unset;
       cursor: pointer; }
       .team .team-people .person:hover:nth-child(1) .content, .team .team-people .person:hover:nth-child(2) .content, .team .team-people .person:hover:nth-child(3) .content, .team .team-people .person:hover:nth-child(4) .content {
         top: 50%; }
@@ -369,6 +395,9 @@ h1 {
     @media (max-width: 480px) {
       .monkey-banner h1:nth-child(2) {
         font-size: 22px; } }
+    @media (max-width: 420px) {
+      .monkey-banner h1:nth-child(2) {
+        font-size: 16px; } }
   .monkey-banner img {
     display: none;
     width: 100%; }
@@ -413,6 +442,8 @@ h1 {
         width: 80px;
         border-radius: 100%;
         background-color: grey; }
+      .clients .client-view-swiper .client-slide h4 {
+        width: 80%; }
   .clients h4 {
     color: #636669; }
     .clients h4 span {
