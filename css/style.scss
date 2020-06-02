@@ -277,9 +277,11 @@ h1 {
                     color: white;
                     transition: 300ms ease-in-out;
                     @include breakpoint(414) { font-size: 14px;}
+                    @include breakpoint(375) {font-size: 12px;}
                 }
                 h4 { 
-                    @include breakpoint(375) { font-size: 11px;}
+                    @include breakpoint(414) { font-size: 11px;}
+                    @include breakpoint(375) { font-size: 9px; margin-bottom: 3px;}
                 }
             }
             &:hover {
@@ -395,11 +397,16 @@ h1 {
     background-image: url("../images/monkey.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    h1:nth-child(2) {
+    padding: 5%;
+    h1:nth-of-type(1) {
+        @include breakpoint(375) { font-size: 18px;}
+    }
+    h1:nth-of-type(2) {
         color: white;
         @include breakpoint(600) { font-size: 25px;}
         @include breakpoint(480) { font-size: 22px;}
         @include breakpoint(420) { font-size: 16px;}
+        @include breakpoint(375) { font-size: 12px;}
     }
     img {
         display: none;
