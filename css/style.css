@@ -220,6 +220,22 @@ h1 {
   @media (max-width: 1200px) {
     .services {
       padding: 5%; } }
+  .services .back-btn {
+    display: none;
+    top: 50%;
+    left: 50px;
+    z-index: 1000;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 5px 8px; }
+    @media (max-width: 1020px) {
+      .services .back-btn {
+        left: 0px; } }
+    @media (max-width: 475px) {
+      .services .back-btn {
+        padding: 2px 5px;
+        font-size: 12px; } }
   .services .services-grid {
     flex-wrap: wrap;
     justify-content: space-evenly; }

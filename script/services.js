@@ -1,11 +1,17 @@
 var grid = $('.grid-section');
 var windowSize = $(window).width()
 
+
+$('.back-btn').click( function() {
+    grid.click();
+})
 grid.click(function(){
     var count = $('div.grid-display').length;
     var height = $('.grid-inner').width();
+    $('.back-btn').css({'position':'fixed','display':'block'});
     if (count === 1) {
         $('.brand-logos').remove();
+        $('.back-btn').css({'display':'none'});
     }
     else {
         if ($(this).attr('id') === 'identityId') {

@@ -2,18 +2,22 @@
 
 //window scroll function for header logo
 $(window).scroll(function windowScroll() {
+
+
+
+
     var windowSize = $(window).width();
     if ( $(window).scrollTop() > 50) {
         $('.logo').css('justify-content','flex-start');
-        $('.menu').css({'right':'5%', 'padding-top':'5px'});
+        $('.menu').css({'right':'10%', 'padding-top':'5px'});
     }
     else {
         $('.logo').css('justify-content','center');
-        $('.menu').css({'right':'10%', 'padding-top':'20px'})
+        $('.menu').css({'right':'15%', 'padding-top':'20px'})
     }
     if ( windowSize > 900) {
         if ( $(window).scrollTop() > 50) {
-            $('.logo').children('img').css({'width':'15%', 'margin-left':'50px'});
+            $('.logo').children('img').css({'width':'15%', 'margin-left':'10%'});
         }
         else {
             $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
@@ -21,7 +25,7 @@ $(window).scroll(function windowScroll() {
     }
     else if ( windowSize > 600 && windowSize <= 900) {
         if ( $(window).scrollTop() > 50) {
-            $('.logo').children('img').css({'width':'20%', 'margin-left':'50px'});
+            $('.logo').children('img').css({'width':'20%', 'margin-left':'10%'});
         }
         else {
             $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
@@ -29,7 +33,7 @@ $(window).scroll(function windowScroll() {
     }
     else if (windowSize > 420 && windowSize <= 600) {
         if ( $(window).scrollTop() > 50) {
-            $('.logo').children('img').css({'width':'25%', 'margin-left':'30px'});
+            $('.logo').children('img').css({'width':'25%', 'margin-left':'5%'});
         }
         else {
             $('.logo').children('img').css({'width':'45%', 'margin-left':'0px'});
@@ -38,7 +42,7 @@ $(window).scroll(function windowScroll() {
     }
     else if (windowSize <= 420) {
         if ( $(window).scrollTop() > 50) {
-            $('.logo').children('img').css({'width':'30%', 'margin-left':'20px'});
+            $('.logo').children('img').css({'width':'30%', 'margin-left':'3%'});
             $('.menu').css({'padding-top':'0px'});
         }
         else {
@@ -80,7 +84,7 @@ $(document).ready(function () {
     });
     //menu intialization
     var hamburger = $('#hamburger-icon');
-    hamburger.click(function () {
+    hamburger.click(function humbergerClick() {
         hamburger.toggleClass('active');
         var hamburgerClass = hamburger.attr('class');
         if (hamburgerClass === 'active') {
