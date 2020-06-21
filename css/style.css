@@ -150,7 +150,8 @@ h1 {
         .header .logo .menu {
           padding-top: 10px; } }
       .header .logo .menu #hamburger-icon {
-        float: right; }
+        float: right;
+        cursor: pointer; }
       .header .logo .menu ul {
         display: none;
         margin-top: 30px;
@@ -163,7 +164,8 @@ h1 {
             letter-spacing: normal;
             color: black;
             opacity: 0.7;
-            text-decoration: none; }
+            text-decoration: none;
+            cursor: pointer; }
 
 /*initiate*/
 .initiate {

@@ -84,26 +84,34 @@ $(document).ready(function () {
     });
     //menu intialization
     var hamburger = $('#hamburger-icon');
-    hamburger.click(function humbergerClick() {
+
+    function menuAnimation() {
         hamburger.toggleClass('active');
         var hamburgerClass = hamburger.attr('class');
         if (hamburgerClass === 'active') {
-            $('.menu ul').show();
+            $('.menu_link').show();
             setTimeout(function() {
                 $('.menu').addClass('shadow')
             }, 200);
             $('.menu').css('padding-bottom','10px');
-            $('.menu ul').addClass('animate__fadeInDown');
-            $('.menu ul').removeClass('animate__fadeOutUp');
+            $('.menu_link').addClass('animate__fadeInDown');
+            $('.menu_link').removeClass('animate__fadeOutUp');
         }
         else {
-            $('.menu ul').hide();
+            $('.menu_link').hide();
             $('.menu').css('padding-bottom','0px');
             $('.menu').removeClass('shadow');
-            $(".menu ul").removeClass('animate__fadeInDown');
-            $(".menu ul").addClass('animate__fadeOutUp');
+            $(".menu_link").removeClass('animate__fadeInDown');
+            $(".menu_link").addClass('animate__fadeOutUp');
         }
         return false;
+    }
+    hamburger.click( function () {
+        menuAnimation();
+    });
+
+    $('.menu_link>li').click( function() {
+        menuAnimation();
     });
 
     //brand grid loading
