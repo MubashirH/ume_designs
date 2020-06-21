@@ -89,22 +89,31 @@ section.mobile-section:nth-of-type(5), section.mobile-section:nth-of-type(6), se
   section.mobile-section:nth-of-type(4) {
     width: 95%; } }
 
-section.web-section:nth-of-type(1), section.web-section:nth-of-type(3), section.web-section:nth-of-type(8) {
-  width: 64.5%; }
-section.web-section:nth-of-type(2), section.web-section:nth-of-type(4), section.web-section:nth-of-type(5), section.web-section:nth-of-type(6), section.web-section:nth-of-type(7) {
-  width: 30.5%; }
-section.web-section:nth-of-type(7), section.web-section:nth-of-type(8) {
-  height: auto !important; }
-@media (max-width: 768px) {
-  section.web-section:nth-of-type(1), section.web-section:nth-of-type(4), section.web-section:nth-of-type(5) {
-    width: 45%; }
-  section.web-section:nth-of-type(2), section.web-section:nth-of-type(3) {
-    width: 94.5%; }
-  section.web-section:nth-of-type(6) {
-    width: 30.5%;
+section.web-section {
+  position: relative; }
+  section.web-section a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; }
+  section.web-section:nth-of-type(1), section.web-section:nth-of-type(3), section.web-section:nth-of-type(8) {
+    width: 64.5%; }
+  section.web-section:nth-of-type(2), section.web-section:nth-of-type(4), section.web-section:nth-of-type(5), section.web-section:nth-of-type(6), section.web-section:nth-of-type(7) {
+    width: 30.5%; }
+  section.web-section:nth-of-type(7), section.web-section:nth-of-type(8) {
     height: auto !important; }
-  section.web-section:nth-of-type(7) {
-    width: 60.5%; } }
+  @media (max-width: 768px) {
+    section.web-section:nth-of-type(1), section.web-section:nth-of-type(4), section.web-section:nth-of-type(5) {
+      width: 45%; }
+    section.web-section:nth-of-type(2), section.web-section:nth-of-type(3) {
+      width: 94.5%; }
+    section.web-section:nth-of-type(6) {
+      width: 30.5%;
+      height: auto !important; }
+    section.web-section:nth-of-type(7) {
+      width: 60.5%; } }
 
 section.brand-section:nth-of-type(1) {
   width: 64.5%; }
