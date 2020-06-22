@@ -575,6 +575,18 @@ h1 {
     @include breakpoint(1200) {
         padding: 5%;
     }
+    .social-swiper {
+        .swiper-button-next, .swiper-button-prev {
+                height: 30px;
+                width: 30px;
+                background-color: white;
+                border-radius: 100%;
+                &:after {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+        }
+    }
 }
 
 //footer section

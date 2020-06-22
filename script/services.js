@@ -90,3 +90,9 @@ grid.click(function(){
     }
     $('.brand-logos').css('height',height);
 });
+
+$(document).ready( function() {
+    $('.brand-logos img').mouseover( function(){
+       $(this).css('transform','scale(1.5)');
+    });
+});

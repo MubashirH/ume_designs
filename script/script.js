@@ -132,7 +132,6 @@ $(document).ready(function () {
             $('.grid-inner h1').text('-');
             // $('.services-grid').css('justify-content','space-between');
             if ($(this).attr('id') === 'brandId') {
-                console.log(1);
                 $('.brand-include').show();
             }
         }
