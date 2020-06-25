@@ -65,7 +65,14 @@ grid.click(function(){
             }
         }
         else if ($(this).attr('id') === 'movieId') {
-            $(this).after('<section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/CM_Logo-1.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/CM_Logo-1.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/GE_Logo-2.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/DT_Logo-2.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/Alt_Logo-2.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/SL_Logo-2.jpg"></section><section class="brand-logos left-brand animate__animated animate__fadeIn"><img class="" src="images/product_logos/DR_Logo-2.jpg"></section>');
+            if (windowSize > 768) {
+                $(this).after('<section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X 720_M&A_a.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A3.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A4.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A_3.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X 720_M&A_b.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A.png"></section>');
+            }
+            else {
+                $(this).before('')
+                $(this).after('<section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A3.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X 720_M&A_a.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A4.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A_3.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X 720_M&A_b.png"></section><section class="brand-logos movie-section animate__animated animate__fadeIn"><img class="" src="images/product_logos/animations/360 X360_M&A.png"></section>');
+            }
+
         }
         else if ($(this).attr('id') === 'eventId') {
             if ( windowSize > 768) {
@@ -91,8 +98,14 @@ grid.click(function(){
     $('.brand-logos').css('height',height);
 });
 
-$(document).ready( function() {
-    $('.brand-logos img').mouseover( function(){
-       $(this).css('transform','scale(1.5)');
-    });
+
+$(document).on('mouseenter','.brand-logos', function() {
+    var img = $(this).find('img').attr('src');
+    $('.container-full').addClass('grayscale');
+    $('.productsPop').css('display','block');
+    $('.productsPop img').attr('src',img);
+});
+$(document).on('mouseleave','.brand-logos', function() {
+    $('.container-full').removeClass('grayscale');
+    $('.productsPop').css('display','none');
 });
