@@ -12,6 +12,10 @@
     margin: 15px 10px;
     overflow: hidden;
     justify-content: center;
+    .overflow { overflow: hidden; border: 1px solid grey;}
+    img {
+        &:hover { transform: scale(1.3); transition: all 300ms ease-out;}
+    }
     img { width: 100%; }
     @include breakpoint(900) {
         margin: 10px 6px;
@@ -34,14 +38,14 @@ section.identity-section {
             width: 30.5%;
             margin: 15px 10px;
             @include breakpoint(768) { width: 98%; margin: 15px auto;}
-            img { 
-                border: 1px solid grey; 
+            .overflow:nth-of-type(1){ margin-bottom: 30px;}
+            img {
                 width: 100%; 
                 @include breakpoint(768) {
                     display: inline-block;
                     width: 46%;
                 }
-                &:nth-child(1) { margin-bottom: 30px;
+                &:nth-child(1) { 
                     @include breakpoint(768) {
                         margin: 0 10px;
                     }
@@ -64,7 +68,7 @@ section.identity-section {
             margin: 15px 10px;
             margin-left: 20px;
             @include breakpoint(768) { width: 96%; margin:15px auto;}
-            img {  border: 1px solid grey; width: 100% !important; }
+            img { width: 100% !important; }
         }
     }
     @include breakpoint(768) {
@@ -122,15 +126,15 @@ section.brand-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-            img { 
-                width: 46%; border: 1px solid grey;
+            .overflow { 
+                width: 46%;
                 &:nth-of-type(1), &:nth-of-type(3) { margin: 15px 25px 15px 0;}
                 &:nth-of-type(2), &:nth-of-type(4) { margin: 15px 0px;}
             }
         }
         .right {
             width: 35%;
-            img { width: 100%; object-fit: contain; border: 1px solid grey; margin: 15px 0px;}
+            img { width: 100%; object-fit: contain; margin: 15px 0px;}
         }
     }
     @include breakpoint(768) {
@@ -141,7 +145,7 @@ section.brand-section {
             img { width: 100%; margin: 15px 0; border: 1px solid grey; }
             .left {
                 width: 35.5%;
-                img {width: 95%; margin: 15px 20px 15px 0px !important;}
+                .overflow {width: 95%; margin: 15px 20px 15px 0px !important;}
             }
             .right { width: 64.5%;
                 img { margin: 15px 0px;}
@@ -170,11 +174,11 @@ section.space-section {
             height: auto !important;
             .left {
                 width: 37%;
-                img { height: auto !important; border: 1px solid grey; margin: 10px 0;}
+                img { height: auto !important;  margin: 10px 0;}
             }
             .right {
                 width: 55%;
-                img { border: 1px solid grey; margin: 10px 0;}
+                img {  margin: 10px 0;}
             } 
         }
         &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) { width: 94.5%;}
@@ -193,16 +197,15 @@ section.product-section {
         .left {
             width: 31%;
             margin: 15px 10px;
-            img { height: auto !important; border: 1px solid grey;}
+            img { height: auto !important; }
         }
         .right {
             width: 66.3%;
             .d-flex {
                 justify-content: space-between;
-                img { width: 47%; margin: 15px 10px;}
+                .overflow { width: 47%; margin: 15px 10px;}
             }
-            img {
-                border: 1px solid grey;
+            .overflow {
                 margin: 15px 10px;
                 width: 97%;
             }
