@@ -116,12 +116,14 @@ h1 {
     .header #logo-small .menu {
       right: 5%; }
   .header .logo {
-    justify-content: center; }
+    justify-content: center;
+    object-fit: contain; }
     @media (max-width: 600px) {
       .header .logo {
         justify-content: flex-start; } }
     .header .logo img {
       transition: all 200ms ease-in-out;
+      object-fit: contain;
       width: 45%; }
     .header .logo .shadow {
       transition: all ease-in-out;

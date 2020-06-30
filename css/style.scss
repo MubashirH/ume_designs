@@ -98,9 +98,11 @@ h1 {
     }
     .logo {
         justify-content: center;
+        object-fit: contain;
         @include breakpoint(600) {justify-content: flex-start;}
         img {
             transition: all 200ms ease-in-out;
+            object-fit: contain;
             width: 45%;
         }
         .shadow {
